@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CBF5F047-BA8A-4249-89F5-CC507B6ABB8B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apple_Store_System</RootNamespace>
+    <AssemblyName>Apple Store System</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accessories.aspx" />
+    <Content Include="admindashboardform.aspx" />
+    <Content Include="customerdashboardform.aspx" />
+    <Content Include="Customer_Logout.aspx" />
+    <Content Include="date report\Date_billing_master_report.aspx" />
+    <Content Include="date report\Date_payment_report.aspx" />
+    <Content Include="dynamic report\Billing detail_dyanamic_report.aspx" />
+    <Content Include="dynamic report\Billing Master_dyanamic_report.aspx" />
+    <Content Include="dynamic report\customer_wise_billl.aspx" />
+    <Content Include="dynamic report\frm_recipt.aspx" />
+    <Content Include="dynamic report\Payment_dyanamic_report.aspx" />
+    <Content Include="Index_page.aspx" />
+    <Content Include="list report\Accessories report.aspx" />
+    <Content Include="list report\Billing details report.aspx" />
+    <Content Include="list report\Billing Master report.aspx" />
+    <Content Include="Billing_detail.aspx" />
+    <Content Include="Billing_Master.aspx" />
+    <Content Include="BizPage\assets\css\style.css" />
+    <Content Include="BizPage\assets\img\about-bg.jpg" />
+    <Content Include="BizPage\assets\img\about-mission.jpg" />
+    <Content Include="BizPage\assets\img\about-plan.jpg" />
+    <Content Include="BizPage\assets\img\about-vision.jpg" />
+    <Content Include="BizPage\assets\img\apple-touch-icon.png" />
+    <Content Include="BizPage\assets\img\blog\blog-1.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-2.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-3.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-4.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-author.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-inside-post.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-recent-1.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-recent-2.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-recent-3.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-recent-4.jpg" />
+    <Content Include="BizPage\assets\img\blog\blog-recent-5.jpg" />
+    <Content Include="BizPage\assets\img\blog\comments-1.jpg" />
+    <Content Include="BizPage\assets\img\blog\comments-2.jpg" />
+    <Content Include="BizPage\assets\img\blog\comments-3.jpg" />
+    <Content Include="BizPage\assets\img\blog\comments-4.jpg" />
+    <Content Include="BizPage\assets\img\blog\comments-5.jpg" />
+    <Content Include="BizPage\assets\img\blog\comments-6.jpg" />
+    <Content Include="BizPage\assets\img\call-to-action-bg.jpg" />
+    <Content Include="BizPage\assets\img\clients\client-1.png" />
+    <Content Include="BizPage\assets\img\clients\client-2.png" />
+    <Content Include="BizPage\assets\img\clients\client-3.png" />
+    <Content Include="BizPage\assets\img\clients\client-4.png" />
+    <Content Include="BizPage\assets\img\clients\client-5.png" />
+    <Content Include="BizPage\assets\img\clients\client-6.png" />
+    <Content Include="BizPage\assets\img\clients\client-7.png" />
+    <Content Include="BizPage\assets\img\clients\client-8.png" />
+    <Content Include="BizPage\assets\img\facts-bg.jpg" />
+    <Content Include="BizPage\assets\img\facts-img.png" />
+    <Content Include="BizPage\assets\img\favicon.png" />
+    <Content Include="BizPage\assets\img\hero-carousel\1.jpg" />
+    <Content Include="BizPage\assets\img\hero-carousel\2.jpg" />
+    <Content Include="BizPage\assets\img\hero-carousel\3.jpg" />
+    <Content Include="BizPage\assets\img\hero-carousel\4.jpg" />
+    <Content Include="BizPage\assets\img\hero-carousel\5.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\app1.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\app2.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\app3.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\card1.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\card2.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\card3.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\portfolio-details-1.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\portfolio-details-2.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\portfolio-details-3.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\web1.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\web2.jpg" />
+    <Content Include="BizPage\assets\img\portfolio\web3.jpg" />
+    <Content Include="BizPage\assets\img\preloader.gif" />
+    <Content Include="BizPage\assets\img\quote-sign-left.png" />
+    <Content Include="BizPage\assets\img\quote-sign-right.png" />
+    <Content Include="BizPage\assets\img\team-1.jpg" />
+    <Content Include="BizPage\assets\img\team-2.jpg" />
+    <Content Include="BizPage\assets\img\team-3.jpg" />
+    <Content Include="BizPage\assets\img\team-4.jpg" />
+    <Content Include="BizPage\assets\img\testimonial-1.jpg" />
+    <Content Include="BizPage\assets\img\testimonial-2.jpg" />
+    <Content Include="BizPage\assets\img\testimonial-3.jpg" />
+    <Content Include="BizPage\assets\img\testimonial-4.jpg" />
+    <Content Include="BizPage\assets\img\testimonial-5.jpg" />
+    <Content Include="BizPage\assets\js\main.js" />
+    <Content Include="BizPage\assets\vendor\animate.css\animate.compat.css" />
+    <Content Include="BizPage\assets\vendor\animate.css\animate.css" />
+    <Content Include="BizPage\assets\vendor\animate.css\animate.min.css" />
+    <Content Include="BizPage\assets\vendor\aos\aos.css" />
+    <Content Include="BizPage\assets\vendor\aos\aos.js" />
+    <Content Include="BizPage\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap-icons\index.html" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="BizPage\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="BizPage\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="BizPage\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="BizPage\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="BizPage\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="BizPage\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="BizPage\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="BizPage\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="BizPage\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="BizPage\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="BizPage\assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="BizPage\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="BizPage\assets\vendor\php-email-form\validate.js" />
+    <Content Include="BizPage\assets\vendor\purecounter\purecounter.js" />
+    <Content Include="BizPage\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="BizPage\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="BizPage\assets\vendor\waypoints\noframework.waypoints.js" />
+    <Content Include="BizPage\blog-single.html" />
+    <Content Include="BizPage\blog.html" />
+    <Content Include="BizPage\changelog.txt" />
+    <Content Include="BizPage\forms\Readme.txt" />
+    <Content Include="BizPage\index.html" />
+    <Content Include="BizPage\inner-page.html" />
+    <Content Include="BizPage\portfolio-details.html" />
+    <Content Include="BizPage\Readme.txt" />
+    <Content Include="Customer.aspx" />
+    <Content Include="Form_admin_login.aspx" />
+    <Content Include="Form_user_login.aspx" />
+    <Content Include="list report\Customer report.aspx" />
+    <Content Include="list report\form_daily_rpt.aspx" />
+    <Content Include="list report\Mobile Master report.aspx" />
+    <Content Include="list report\Payment report.aspx" />
+    <Content Include="Mobile master.aspx" />
+    <Content Include="Payment.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="search\cancle_product.aspx" />
+    <Content Include="search\main_search.aspx" />
+    <Content Include="search\search_accessories.aspx" />
+    <Content Include="search\search_accessories_details.aspx" />
+    <Content Include="search\search_mobile.aspx" />
+    <Content Include="search\search_mobile_details.aspx" />
+    <Content Include="search\ShowCart.aspx" />
+    <Content Include="updatecustomer.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessories.aspx.cs">
+      <DependentUpon>Accessories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accessories.aspx.designer.cs">
+      <DependentUpon>Accessories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admindashboardform.aspx.cs">
+      <DependentUpon>admindashboardform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admindashboardform.aspx.designer.cs">
+      <DependentUpon>admindashboardform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customerdashboardform.aspx.cs">
+      <DependentUpon>customerdashboardform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerdashboardform.aspx.designer.cs">
+      <DependentUpon>customerdashboardform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Logout.aspx.cs">
+      <DependentUpon>Customer_Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Logout.aspx.designer.cs">
+      <DependentUpon>Customer_Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="date report\Date_billing_master.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Date_billing_master.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="date report\Date_billing_master_report.aspx.cs">
+      <DependentUpon>Date_billing_master_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="date report\Date_billing_master_report.aspx.designer.cs">
+      <DependentUpon>Date_billing_master_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="date report\Date_payment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Date_payment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="date report\Date_payment_report.aspx.cs">
+      <DependentUpon>Date_payment_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="date report\Date_payment_report.aspx.designer.cs">
+      <DependentUpon>Date_payment_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamic report\Billing detail_dyanamic.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Billing detail_dyanamic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dynamic report\Billing detail_dyanamic_report.aspx.cs">
+      <DependentUpon>Billing detail_dyanamic_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dynamic report\Billing detail_dyanamic_report.aspx.designer.cs">
+      <DependentUpon>Billing detail_dyanamic_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamic report\Billing Master_dyanamic_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Billing Master_dyanamic_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dynamic report\Billing Master_dyanamic_report.aspx.cs">
+      <DependentUpon>Billing Master_dyanamic_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dynamic report\Billing Master_dyanamic_report.aspx.designer.cs">
+      <DependentUpon>Billing Master_dyanamic_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamic report\customer_wise_billl.aspx.cs">
+      <DependentUpon>customer_wise_billl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dynamic report\customer_wise_billl.aspx.designer.cs">
+      <DependentUpon>customer_wise_billl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamic report\frm_recipt.aspx.cs">
+      <DependentUpon>frm_recipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dynamic report\frm_recipt.aspx.designer.cs">
+      <DependentUpon>frm_recipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamic report\Payment_dyanamic_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payment_dyanamic_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dynamic report\Payment_dyanamic_report.aspx.cs">
+      <DependentUpon>Payment_dyanamic_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dynamic report\Payment_dyanamic_report.aspx.designer.cs">
+      <DependentUpon>Payment_dyanamic_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamic report\Recipt_bill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recipt_bill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Index_page.aspx.cs">
+      <DependentUpon>Index_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index_page.aspx.designer.cs">
+      <DependentUpon>Index_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Accessories report.aspx.cs">
+      <DependentUpon>Accessories report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list report\Accessories report.aspx.designer.cs">
+      <DependentUpon>Accessories report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Accessories_list1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accessories_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list report\Billing details report.aspx.cs">
+      <DependentUpon>Billing details report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list report\Billing details report.aspx.designer.cs">
+      <DependentUpon>Billing details report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Billing detail_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Billing detail_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list report\Billing Master report.aspx.cs">
+      <DependentUpon>Billing Master report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list report\Billing Master report.aspx.designer.cs">
+      <DependentUpon>Billing Master report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Billing_detail.aspx.cs">
+      <DependentUpon>Billing_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Billing_detail.aspx.designer.cs">
+      <DependentUpon>Billing_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Billing_Master.aspx.cs">
+      <DependentUpon>Billing_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Billing_Master.aspx.designer.cs">
+      <DependentUpon>Billing_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Billing Master_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Billing Master_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_admin_login.aspx.cs">
+      <DependentUpon>Form_admin_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_admin_login.aspx.designer.cs">
+      <DependentUpon>Form_admin_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_user_login.aspx.cs">
+      <DependentUpon>Form_user_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_user_login.aspx.designer.cs">
+      <DependentUpon>Form_user_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Customer report.aspx.cs">
+      <DependentUpon>Customer report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list report\Customer report.aspx.designer.cs">
+      <DependentUpon>Customer report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Customer_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list report\Daily_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Daily_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list report\form_daily_rpt.aspx.cs">
+      <DependentUpon>form_daily_rpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list report\form_daily_rpt.aspx.designer.cs">
+      <DependentUpon>form_daily_rpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Mobile Master report.aspx.cs">
+      <DependentUpon>Mobile Master report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list report\Mobile Master report.aspx.designer.cs">
+      <DependentUpon>Mobile Master report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Mobile Master_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mobile Master_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list report\Payment report.aspx.cs">
+      <DependentUpon>Payment report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list report\Payment report.aspx.designer.cs">
+      <DependentUpon>Payment report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list report\Payment_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payment_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mobile master.aspx.cs">
+      <DependentUpon>Mobile master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile master.aspx.designer.cs">
+      <DependentUpon>Mobile master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPT_Billing_dropdwon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_Billing_dropdwon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="search\cancle_product.aspx.cs">
+      <DependentUpon>cancle_product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search\cancle_product.aspx.designer.cs">
+      <DependentUpon>cancle_product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search\main_search.aspx.cs">
+      <DependentUpon>main_search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search\main_search.aspx.designer.cs">
+      <DependentUpon>main_search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search\search_accessories.aspx.cs">
+      <DependentUpon>search_accessories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search\search_accessories.aspx.designer.cs">
+      <DependentUpon>search_accessories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search\search_accessories_details.aspx.cs">
+      <DependentUpon>search_accessories_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search\search_accessories_details.aspx.designer.cs">
+      <DependentUpon>search_accessories_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search\search_mobile.aspx.cs">
+      <DependentUpon>search_mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search\search_mobile.aspx.designer.cs">
+      <DependentUpon>search_mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search\search_mobile_details.aspx.cs">
+      <DependentUpon>search_mobile_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search\search_mobile_details.aspx.designer.cs">
+      <DependentUpon>search_mobile_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search\ShowCart.aspx.cs">
+      <DependentUpon>ShowCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search\ShowCart.aspx.designer.cs">
+      <DependentUpon>ShowCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatecustomer.aspx.cs">
+      <DependentUpon>updatecustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatecustomer.aspx.designer.cs">
+      <DependentUpon>updatecustomer.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="photo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="date report\Date_billing_master.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Date_billing_master.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="date report\Date_payment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Date_payment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dynamic report\Billing detail_dyanamic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Billing detail_dyanamic.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dynamic report\Billing Master_dyanamic_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Billing Master_dyanamic_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dynamic report\Payment_dyanamic_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Payment_dyanamic_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dynamic report\Recipt_bill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Recipt_bill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list report\Accessories_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Accessories_list1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list report\Billing detail_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Billing detail_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list report\Billing Master_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Billing Master_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list report\Customer_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Customer_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list report\Daily_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Daily_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list report\Mobile Master_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Mobile Master_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list report\Payment_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Payment_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT_Billing_dropdwon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_Billing_dropdwon.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BizPage\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <None Include="BizPage\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <None Include="BizPage\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <None Include="BizPage\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="BizPage\forms\contact.php" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57923</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
